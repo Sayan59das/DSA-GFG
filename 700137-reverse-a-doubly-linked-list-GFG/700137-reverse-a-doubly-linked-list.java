@@ -14,23 +14,18 @@ class Node {
 class Solution {
     public Node reverse(Node head) {
         // code here
-        Deque<Integer> st = new ArrayDeque<>();
+        Node current = head;
+        Node last = null;
         
-        Node temp = head;
-        
-        while(temp != null){
-            st.push(temp.data);
-            temp = temp.next;
+        while(current != null){
+            last = current.prev;
+            current.prev = current.next;
+            current.next = last;
+            current = current.prev;
         }
         
-        temp = head;
-        while(temp != null){
-            temp.data = st.peek();
-            st.pop();
-            temp = temp.next;
-        }
+        return last.prev;
         
-        return head;
     }
 }
 
