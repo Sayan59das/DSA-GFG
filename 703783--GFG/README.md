@@ -1,2 +1,0 @@
-# [](https://www.geeksforgeeks.org/problems/armstrong-numbers2727/1)
-## 
