@@ -33,9 +33,9 @@ class Solution {
                 second = third.next;
 
             }
-            else{
-                second = null;
-            }
+            // else{
+            //     second = null;
+            // }
         }
 
         return head;
